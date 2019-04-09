@@ -23,7 +23,19 @@ gem 'uglifier', '>= 1.3.0'
 
 # db and auths
 gem 'devise'
+gem 'paper_trail'
 gem 'pg', '~> 0.18'
+
+# api
+gem 'doorkeeper'
+gem 'grape'
+gem 'grape-entity'
+gem 'grape-kaminari'
+gem 'grape-swagger'
+gem 'grape-swagger-rails'
+gem 'kaminari'
+gem 'kaminari-grape'
+gem 'rack-cors', require: 'rack/cors'
 
 group :development do
   gem 'better_errors'
