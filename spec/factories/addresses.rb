@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: addresses
@@ -23,7 +24,7 @@ FactoryBot.define do
     address { Faker::Blockchain::Ethereum.address }
 
     trait :ethereum do
-      type 'Accounts::Ethereum'
+      type { 'Accounts::Ethereum' }
     end
   end
 end

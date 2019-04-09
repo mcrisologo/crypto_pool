@@ -21,9 +21,11 @@
 #
 
 describe User do
-  before(:each) { @user = User.new(email: 'user@example.com') }
-
   subject { @user }
+
+  before do
+    @user = User.new(email: 'user@example.com')
+  end
 
   it { should respond_to(:email) }
 

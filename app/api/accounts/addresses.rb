@@ -9,6 +9,17 @@ module Accounts
           present paginate(current_user.ethereum_addresses), with: Accounts::Address::Entity
         end
 
+        desc 'Get transactions'
+        params do
+          requires :address, type: String, desc: 'Address'
+        end
+        get :transaction do
+          address = current_user.ethereum_addresses.find_by(address: @data[:address])
+          not_found!('Address not found') unless address
+
+          present Accounts::EthereumGroup::GetTransactions.new(address.address).call
+        end
+
         desc 'Create user address'
         params do
           requires :name, type: String, desc: 'Name'

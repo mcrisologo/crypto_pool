@@ -28,6 +28,7 @@ gem 'pg', '~> 0.18'
 
 # api
 gem 'doorkeeper'
+gem 'faraday'
 gem 'grape'
 gem 'grape-entity'
 gem 'grape-kaminari'
@@ -49,6 +50,7 @@ group :development do
   # code doctors
   gem 'annotate'
   gem 'rubocop'
+  gem 'rubocop-rspec'
 end
 
 group :development, :test do
