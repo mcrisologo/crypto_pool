@@ -28,4 +28,7 @@ class User < ApplicationRecord
          :created_at, :updated_at
 
   has_paper_trail
+
+  has_many :addresses, class_name: 'Accounts::Address', dependent: :destroy
+  has_many :ethereum_addresses, class_name: 'Accounts::Ethereum', dependent: :destroy
 end
