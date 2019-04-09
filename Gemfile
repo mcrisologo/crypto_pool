@@ -12,7 +12,7 @@ gem 'rails'
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 # frontend
-gem 'bootstrap', '~> 4.0.0'
+gem 'bootstrap'
 gem 'coffee-rails', '~> 4.2'
 gem 'high_voltage'
 gem 'jbuilder', '~> 2.5'
