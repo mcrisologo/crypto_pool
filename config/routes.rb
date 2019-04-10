@@ -5,8 +5,6 @@ Rails.application.routes.draw do
   root to: 'visitors#index'
 
   devise_for :users
-  resources :users
-
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
@@ -18,4 +16,6 @@ Rails.application.routes.draw do
   authenticate :user, ->(u) { u.admin? || u.email == Rails.application.secrets.admin_email } do
     mount GrapeSwaggerRails::Engine => '/swagger' if Rails.env.production?
   end
+
+  resources :addresses
 end

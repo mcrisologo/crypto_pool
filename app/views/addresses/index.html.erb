@@ -1,0 +1,9 @@
+<div class="mastmain">
+  <h3>Address List</h3>
+  <% @addresses.each do |address|%>
+      <div class="row">
+        <div class="col-sm"><%= address.name %></div>
+        <div class="col-lg"><%= address.address %></div>
+      </div>
+  <% end %>
+</div>
