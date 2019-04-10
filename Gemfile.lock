@@ -24,6 +24,18 @@ GEM
       erubi (~> 1.4)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.0, >= 1.0.3)
+    activeadmin (1.4.3)
+      arbre (>= 1.1.1)
+      coffee-rails
+      formtastic (~> 3.1)
+      formtastic_i18n
+      inherited_resources (>= 1.9.0)
+      jquery-rails (>= 4.2.0)
+      kaminari (>= 0.15)
+      railties (>= 4.2, < 5.3)
+      ransack (>= 1.8.7)
+      sass (~> 3.1)
+      sprockets (< 4.1)
     activejob (5.2.3)
       activesupport (= 5.2.3)
       globalid (>= 0.3.6)
@@ -47,6 +59,8 @@ GEM
     annotate (2.7.4)
       activerecord (>= 3.2, < 6.0)
       rake (>= 10.4, < 13.0)
+    arbre (1.1.1)
+      activesupport (>= 3.0.0)
     arel (9.0.0)
     ast (2.4.0)
     autoprefixer-rails (9.5.1)
@@ -114,6 +128,9 @@ GEM
     faraday (0.15.4)
       multipart-post (>= 1.2, < 3)
     ffi (1.10.0)
+    formtastic (3.1.5)
+      actionpack (>= 3.2.13)
+    formtastic_i18n (0.6.0)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
     grape (1.2.3)
@@ -133,10 +150,18 @@ GEM
       grape (>= 0.16.2)
     grape-swagger-rails (0.3.1)
       railties (>= 3.2.12)
+    has_scope (0.7.2)
+      actionpack (>= 4.1)
+      activesupport (>= 4.1)
     high_voltage (3.1.0)
     i18n (1.6.0)
       concurrent-ruby (~> 1.0)
     ice_nine (0.11.2)
+    inherited_resources (1.9.0)
+      actionpack (>= 4.2, < 5.3)
+      has_scope (~> 0.6)
+      railties (>= 4.2, < 5.3)
+      responders
     jaro_winkler (1.5.2)
     jbuilder (2.8.0)
       activesupport (>= 4.2.0)
@@ -231,6 +256,11 @@ GEM
       thor (>= 0.19.0, < 2.0)
     rainbow (3.0.0)
     rake (12.3.2)
+    ransack (2.1.1)
+      actionpack (>= 5.0)
+      activerecord (>= 5.0)
+      activesupport (>= 5.0)
+      i18n
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
       ffi (~> 1.0)
@@ -340,6 +370,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activeadmin
   annotate
   better_errors
   bootstrap
