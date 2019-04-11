@@ -20,7 +20,7 @@ module Accounts
       private
 
       def fetch_data
-        response = Accounts::GetConnection.call(URL).get do |req|
+        response = Connection.create(URL).get do |req|
           req.params['apikey'] = KEY
           req.params['module'] = 'account'
           req.params['action'] = 'txlist'
